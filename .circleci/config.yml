@@ -1,21 +1,26 @@
 version: 2.1
 jobs:
-  build:
-    docker:
-      - image: ubuntu:20.04
-    steps:
-      - run:
-          envinronment:
-            user: emailrbrb
-          name: "build and run"
-          command: |
-            user="emailrbrb" echo $user
-            pwd="rbrbrb1!" echo $pwd
-            TO="rafaljbogusz@gmail.com" echo $TO
-            FROM="rafalb"   echo $FROM
-            apt-get -y -qq update
-            apt-get -y -qq install curl
-            apt-get -y  install python3
-            apt-get install -y wget 
-            wget https://raw.githubusercontent.com/rafalbog/crispy-11/main/email12345.py  
-            python3 email12345.py  
+  jab_now:
+      build:
+      docker:
+        - image: ubuntu:20.04
+      steps:
+        - run:
+            envinronment:
+              user: emailrbrb
+            name: "build and run"
+            command: |
+              user="emailrbrb" echo $user
+              pwd="rbrbrb1!" echo $pwd
+              TO="rafaljbogusz@gmail.com" echo $TO
+              FROM="rafalb"   echo $FROM
+              apt-get -y -qq update
+              apt-get -y -qq install curl
+              apt-get -y  install python3
+              apt-get install -y wget 
+              wget https://raw.githubusercontent.com/rafalbog/crispy-11/main/email12345.py  
+              python3 email12345.py  
+workflows:
+  dock-building:
+    jobs:
+      - jab_now
