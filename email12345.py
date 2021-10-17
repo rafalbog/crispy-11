@@ -1,8 +1,10 @@
 import smtplib
+import os
 
-user = open("user").read()
-pwd = open("pwd").read()
-FROM = "rafalb"
+
+user = os.environ["user"]
+pwd = os.environ["pwd"]
+FROM = os.environ["TO"]
 print(pwd)
 TO = open("TO").read()
 message = '\n\n\nNever gonna give you up\n\n\n'
