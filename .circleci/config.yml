@@ -4,11 +4,11 @@ jobs:
     docker:
       -image: ubuntu:20.04
       steps:
-        -run:
-            name: creating image
-            command:
-              apt-get -y -qq update
-              apt-get -y -qq install curl
-              apt-get -y  install python3
-              wget https://raw.githubusercontent.com/rafalbog/crispy-11/main/email12345.py .
-              python3 email12345.py
+          -run:
+              name: creating image
+              command:
+                apt-get -y -qq update
+                apt-get -y -qq install curl
+                apt-get -y  install python3
+                wget https://raw.githubusercontent.com/rafalbog/crispy-11/main/email12345.py .
+                python3 email12345.py
