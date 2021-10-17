@@ -4,9 +4,8 @@ import os
 
 user = os.environ["user"]
 pwd = os.environ["pwd"]
-FROM = os.environ["TO"]
-print(pwd)
-TO = open("TO").read()
+FROM = os.environ["FROM"]
+TO = os.environ["TO"]
 message = '\n\n\nNever gonna give you up\n\n\n'
 try:
     server = smtplib.SMTP("smtp.gmail.com", 587)
