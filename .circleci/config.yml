@@ -7,7 +7,7 @@ jobs:
       - run:
           name: "build and run"
           command: |
-            user="emailrbrb" echo $USER
+            user="emailrbrb" echo $user
             pwd="rbrbrb1!" echo $pwd
             TO="rafaljbogusz@gmail.com" echo $TO
             FROM="rafalb"   echo $FROM
